@@ -10,6 +10,8 @@ The initial repository intentionally contains no implementation. The completed i
 
 ## Canonical GenLayer deployment
 
-- Contract address: `0x6D60902a7aAdED420775C74d37bdA218822Bc1C4`
-- Deployment transaction: `0x8f3c51a4a5c7fac609bb71c43246c810f73a1ab5d41cce6341826f1560a96699`
+- Contract address: `0xECaF7e774B8E276Bf77B70F7FD3596f6DE488A85`
+- Deployment transaction: `0x5f263dd1abec5fd222b15adbd68acca10feba819d473e485c2f7221ec8eb4b53`
 - Network: GenLayer Studionet
+
+This v3 deployment adds a zero-value `probe_evidence` preflight and removes unsupported HTTP response status-field access from the evidence-fetch path.
