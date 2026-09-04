@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MergeBounty — Software bounties settled by evidence, not trust</title>
+  <meta name="description" content="MergeBounty is a GenLayer-powered consensus-settled software bounty escrow. Verified Studionet demo (1 GEN, consensus APPROVED, finalized payout) plus a live MetaMask + GenLayerJS dApp for the deployed Intelligent Contract on chain 61999." />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner container">
+      <a class="brand" href="#top" aria-label="MergeBounty home">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="26" height="26" fill="none">
+            <path d="M6 22V10l10 8 10-8v12" stroke="url(#mbg)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="16" cy="25" r="2.2" fill="#5cc8ff"/>
+            <defs><linearGradient id="mbg" x1="6" y1="10" x2="26" y2="22"><stop stop-color="#5cc8ff"/><stop offset="1" stop-color="#8f7bff"/></linearGradient></defs>
+          </svg>
+        </span>
+        <span class="brand__name">MergeBounty</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#lifecycle">Lifecycle</a>
+        <a href="#demo">Verified Demo</a>
+        <a href="#live-dapp">Live dApp</a>
+        <a href="#transactions">Transactions</a>
+        <a href="#evidence">Evidence</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#security">Security</a>
+      </nav>
+      <div class="wl-slot" id="wallet-slot"><!-- wallet button rendered by dapp.js --></div>
+      <a class="btn btn--ghost nav__cta nav__cta--gh" href="https://github.com/amzar1st/mergebounty-demo" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository">
+        <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <div class="netpill" id="net-pill">
+            <span class="netpill__dot" aria-hidden="true"></span>
+            <span>GenLayer Studionet</span>
+            <span class="netpill__sep" aria-hidden="true"></span>
+            <span class="netpill__status">Verified Demo</span>
+          </div>
+          <h1 class="hero__title">Software bounties settled by <em>evidence</em>, not trust.</h1>
+          <p class="hero__sub">
+            MergeBounty is a GenLayer-powered escrow where sponsors lock GEN against immutable
+            software requirements, developers submit an exact Git commit with SHA-256 commit-bound
+            evidence, and independent GenLayer validators reach consensus on whether the work
+            satisfies the original requirements.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#demo">Explore Verified Demo</a>
+            <a class="btn btn--ghost" href="https://github.com/amzar1st/mergebounty-demo" target="_blank" rel="noopener noreferrer">View GitHub</a>
+          </div>
+          <p class="hero__note">Canonical demo values below are the read-only result of the completed on-chain lifecycle. Connect MetaMask to interact with the live contract in the <a href="#live-dapp">Live dApp</a> section.</p>
+        </div>
+
+        <div class="hero__panel" id="hero-panel" aria-label="Proof summary of the verified demo bounty">
+          <!-- rendered by JS: compact proof flow with canonical values -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LIFECYCLE ============ -->
+    <section class="section" id="lifecycle">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Protocol lifecycle</p>
+          <h2>From escrow to settlement, every transition is on-chain</h2>
+          <p class="section__sub">Six explicit states. No off-chain promises, no mutable targets.</p>
+        </header>
+        <ol class="lifecycle" id="lifecycle-list"><!-- rendered by JS --></ol>
+      </div>
+    </section>
+
+    <!-- ============ VERIFIED DEMO DASHBOARD ============ -->
+    <section class="section section--alt" id="demo">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Verified Studionet Demo</p>
+          <h2>A complete 1&nbsp;GEN bounty, from funding to finalized payout</h2>
+          <p class="section__sub">
+            Read-only verified proof dashboard. All values are canonical results of the completed
+            on-chain lifecycle on GenLayer Studionet — nothing here is simulated.
+          </p>
+        </header>
+        <div id="demo-dashboard" class="dashboard reveal"><!-- rendered by JS --></div>
+      </div>
+    </section>
+
+    <!-- ============ LIVE dAPP (wallet-connected contract interaction) ============ -->
+    <section class="section" id="live-dapp">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Live dApp</p>
+          <h2>Use MergeBounty</h2>
+          <p class="section__sub">
+            Wallet-connected interaction layer for the MergeBounty contract on GenLayer Studionet.
+            Every write here is a real MetaMask signature and a real on-chain transaction &mdash;
+            distinct from the read-only <a href="#demo">Verified Studionet Demo</a> above, which
+            preserves the completed 1&nbsp;GEN lifecycle as canonical proof.
+          </p>
+        </header>
+        <div id="live-dapp-body"><!-- rendered by dapp.js --></div>
+      </div>
+    </section>
+
+    <!-- ============ TRANSACTION PROOF TIMELINE ============ -->
+    <section class="section" id="transactions">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Transaction proof</p>
+          <h2>Seven transactions, one unbroken lifecycle</h2>
+          <p class="section__sub">The complete canonical transaction trail of the demo bounty on Studionet.</p>
+        </header>
+        <ol class="timeline" id="tx-timeline"><!-- rendered by JS --></ol>
+      </div>
+    </section>
+
+    <!-- ============ EVIDENCE PANEL ============ -->
+    <section class="section section--alt" id="evidence">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Commit &amp; evidence</p>
+          <h2>Pinned, hashed, and publicly auditable</h2>
+          <p class="section__sub">
+            A mutable branch can change after submission. MergeBounty binds review to an exact commit
+            plus a SHA-256 digest of the commit-bound public evidence, so validators adjudicate a
+            stable, auditable target.
+          </p>
+        </header>
+        <div class="evidence-grid reveal" id="evidence-panel"><!-- rendered by JS --></div>
+        <div class="integrity reveal" id="integrity-check" aria-live="polite"><!-- rendered by JS --></div>
+      </div>
+    </section>
+
+    <!-- ============ ARCHITECTURE ============ -->
+    <section class="section" id="architecture">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Consensus &amp; evidence architecture</p>
+          <h2>Eleven mechanisms that replace trust with verification</h2>
+        </header>
+        <div class="arch-grid" id="arch-grid"><!-- rendered by JS --></div>
+      </div>
+    </section>
+
+    <!-- ============ SECURITY / TRUST ============ -->
+    <section class="section section--alt" id="security">
+      <div class="container">
+        <header class="section__head reveal">
+          <p class="eyebrow">Security &amp; trust model</p>
+          <h2>Stronger than a sponsor-controlled bounty — by construction</h2>
+        </header>
+        <div class="trust-grid" id="trust-grid"><!-- rendered by JS --></div>
+        <div class="disclaimer reveal">
+          <strong>Honest scope.</strong> MergeBounty reduces discretion and ambiguity; it does not
+          eliminate all risk. We do not claim the system is “fraud-proof” or unconditionally secure —
+          validator adjudication is bounded by the quality of the stated requirements and the evidence,
+          and every dispute path is explicit and time-bounded rather than absolute.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div>
+        <div class="brand brand--footer">
+          <span class="brand__name">MergeBounty</span>
+        </div>
+        <p class="footer__tag">Software bounties settled by evidence, not trust.</p>
+        <p class="footer__class">
+          Site classification: <strong>verified Studionet proof dashboard + live
+          MetaMask / GenLayerJS dApp</strong>. Historical demo data is clearly separated
+          from live contract interactions — writes only report success after real
+          on-chain finalization.
+        </p>
+      </div>
+      <div class="footer__col">
+        <h3>Canonical links</h3>
+        <a href="https://github.com/amzar1st/mergebounty-demo" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+        <a href="https://github.com/amzar1st/mergebounty-demo/commit/7ce2b69d8f5dd664c6450627fa696afd46f0bdd9" target="_blank" rel="noopener noreferrer">Reviewed commit</a>
+        <a href="https://raw.githubusercontent.com/amzar1st/mergebounty-demo/7ce2b69d8f5dd664c6450627fa696afd46f0bdd9/EVIDENCE.md" target="_blank" rel="noopener noreferrer">EVIDENCE.md (pinned)</a>
+      </div>
+      <div class="footer__col">
+        <h3>Network</h3>
+        <span class="footer__mono">GenLayer Studionet</span>
+        <span class="footer__mono" id="footer-contract"></span>
+      </div>
+    </div>
+    <div class="container footer__base">
+      <span>MergeBounty — GenLayer-powered consensus-settled bounty escrow.</span>
+      <span>Built from the canonical Website Builder Pack. No secrets, no fabricated chain data.</span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

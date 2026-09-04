@@ -1,0 +1,17 @@
+{
+  "name": "mergebounty",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Runnable MergeBounty Builder Project: GenLayer Intelligent Contract + MetaMask/GenLayerJS frontend",
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "test": "npm run check",
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/serve.mjs frontend 4173",
+    "start": "node scripts/serve.mjs dist 4173"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
