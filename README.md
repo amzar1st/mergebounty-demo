@@ -1,9 +1,56 @@
 # MergeBounty Demo Repository
 
-This repository is used as controlled public evidence for the MergeBounty GenLayer demo.
+This repository is controlled public evidence for the MergeBounty GenLayer demo.
 
-## Demo task
+## Completed bounty task
 
-A developer will implement a deterministic `slugify(text)` utility according to an immutable bounty specification.
+This submission implements a deterministic Python `slugify(text)` utility according to the immutable bounty requirements.
 
-The initial repository intentionally contains no implementation. The completed implementation will be committed later as the developer submission so the exact Git commit can be reviewed by GenLayer validators.
+### Behavior
+
+The function:
+
+- converts input text to lowercase;
+- replaces one or more whitespace characters with a single hyphen;
+- removes unsupported punctuation and special characters;
+- preserves lowercase ASCII letters, numbers, and hyphens;
+- collapses repeated hyphens;
+- removes leading and trailing hyphens.
+
+### Usage
+
+```python
+from slugify import slugify
+
+print(slugify("Hello, MergeBounty!"))
+# hello-mergebounty
+
+print(slugify("  Ship   Version #2  "))
+# ship-version-2
+```
+
+### Tests
+
+The repository includes `test_slugify.py` with automated coverage for:
+
+- normal text;
+- repeated spaces;
+- punctuation;
+- mixed case;
+- leading/trailing whitespace;
+- repeated hyphens;
+- special characters;
+- leading/trailing hyphens.
+
+Run the tests with:
+
+```bash
+python -m unittest -v
+```
+
+## Files
+
+- `slugify.py` — implementation
+- `test_slugify.py` — automated tests
+- `TASK.md` — original task marker
+- `EVIDENCE.md` — commit-bound review evidence for GenLayer validators
