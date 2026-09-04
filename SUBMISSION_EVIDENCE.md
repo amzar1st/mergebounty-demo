@@ -1,12 +1,19 @@
 # MergeBounty — Final Studionet Submission Evidence
 
-This document records the canonical deployment and completed end-to-end live bounty lifecycle for MergeBounty.
+This document records the canonical deployment, completed end-to-end bounty lifecycle, and final public frontend for MergeBounty.
 
 ## Canonical deployment
 
 - Network: GenLayer Studionet
 - Contract address: `0xe382bD55151f22Cd6477Ea613F21337C8d30b1EE`
 - Deployment transaction: `0xd336d8f089efde838fd581f808061ae0258d9198e579d527558acfe409b573b5`
+
+## Public website / frontend
+
+- Live website: https://genspark.genspark.site/api/designer2/serve/307ba5bb-fbd9-45a9-9e6e-9bd06293838a/index.html
+- Site classification: Verified Studionet proof dashboard + genuine MetaMask-connected GenLayerJS dApp
+
+The live dApp uses MetaMask with GenLayer Studionet, provider-backed GenLayerJS clients, real contract reads, fee-estimated writes, finalization waiting, and `isSuccessful` checks before reporting successful execution.
 
 ## Demo bounty
 
@@ -51,9 +58,8 @@ MergeBounty is a GEN-funded software-bounty escrow with:
 - `APPROVED`, `REJECTED`, and `INSUFFICIENT_EVIDENCE` outcomes;
 - a bounded challenge path for non-approved verdicts;
 - timeout/refund protections;
-- append-only audit history; and
-- automatic payout/refund settlement.
+- append-only audit history;
+- automatic payout/refund settlement; and
+- a public MetaMask/GenLayerJS frontend for live contract interaction.
 
-## Website
-
-A public MergeBounty web interface will be linked here after deployment. The website is presentation and interaction infrastructure; the canonical on-chain proof remains the Studionet contract and the transactions above.
+The canonical on-chain proof remains the Studionet deployment and lifecycle transactions above. The exact reviewed developer commit is preserved unchanged.
