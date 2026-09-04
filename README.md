@@ -4,6 +4,13 @@ MergeBounty is a GenLayer-powered software bounty escrow that binds payment to i
 
 Sponsors fund bounties in GEN. Developers explicitly accept the governing terms hash, submit an exact commit plus commit-bound evidence, and GenLayer validators independently adjudicate whether the work materially satisfies the bounty. Approved work can be finalized into payout, while non-approved outcomes have a bounded challenge path and timeout/refund protections.
 
+## Live website
+
+- Public website / live dApp: https://genspark.genspark.site/api/designer2/serve/307ba5bb-fbd9-45a9-9e6e-9bd06293838a/index.html
+- Site classification: verified Studionet proof dashboard + genuine MetaMask-connected GenLayerJS dApp
+
+The frontend keeps the historical verified demo separate from live wallet interactions. Live writes use MetaMask, GenLayerJS fee estimation, `writeContract`, `waitForFinalization`, and `isSuccessful` before reporting success.
+
 ## Canonical Studionet deployment
 
 - Network: GenLayer Studionet
@@ -29,7 +36,7 @@ MergeBounty completed a full live 1 GEN bounty lifecycle using bounty ID `mergeb
 - Evidence SHA-256: `44975f1aee71aa648481d55babbd43c6fa2a502337a831a0ea4a7a38c1c03ac7`
 - Developer submission branch: https://github.com/amzar1st/mergebounty-demo/tree/developer-submission
 
-The reviewed `EVIDENCE.md` maps all immutable bounty requirements to the implementation, automated tests and documentation contained in the exact commit.
+The reviewed `EVIDENCE.md` maps all immutable bounty requirements to the implementation, automated tests and documentation contained in the exact commit. The reviewed developer commit remains unchanged; presentation/frontend work lives on `main`.
 
 ## Demo task
 
@@ -60,11 +67,21 @@ MergeBounty demonstrates:
 - append-only audit history; and
 - final payout/refund settlement.
 
+## Frontend stack
+
+The final Genspark frontend includes:
+
+- MetaMask EIP-1193 wallet connection;
+- GenLayer Studionet network switching (`61999` / `0xf22f`);
+- GenLayerJS `readContract` for public reads;
+- provider-backed GenLayerJS writes;
+- fee estimation with `estimateTransactionFeesForWrite`;
+- payable GEN value support for `create_bounty`;
+- `waitForFinalization` + `isSuccessful` outcome verification;
+- exact MergeBounty read/write forms; and
+- a separate immutable Verified Studionet Demo proof dashboard.
+
 ## Evidence and submission documentation
 
-- [`SUBMISSION_EVIDENCE.md`](./SUBMISSION_EVIDENCE.md) — canonical deployment, exact proof links and complete live transaction trail.
-- [`WEBSITE_HANDOFF.md`](./WEBSITE_HANDOFF.md) — facts, product messaging and requirements for the public MergeBounty website.
-
-## Website
-
-The public website is being prepared. Once deployed, its live URL and frontend source/evidence will be added here without altering the immutable reviewed developer commit.
+- [`SUBMISSION_EVIDENCE.md`](./SUBMISSION_EVIDENCE.md) — canonical deployment, proof links, website link and complete live transaction trail.
+- [`WEBSITE_FINAL.md`](./WEBSITE_FINAL.md) — live site URL and final wallet/GenLayerJS integration audit.
