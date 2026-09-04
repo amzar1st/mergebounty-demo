@@ -1,0 +1,5 @@
+# Website package pointer
+
+Primary instruction: `WEBSITE_BUILD_PROMPT.md`
+
+Supporting source-of-truth files: `PROJECT_OVERVIEW.md`, `SUBMISSION_EVIDENCE.md`, `WEBSITE_HANDOFF.md`, `WEBSITE_CONTENT.md`, `FRONTEND_INTEGRATION.md`, `WEBSITE_DATA.json`, `WEBSITE_VISUAL_BRIEF.md`, `WEBSITE_ARCHITECTURE.md`, `WEBSITE_SECURITY_COPY.md`, `WEBSITE_FAQ.md`, `WEBSITE_TEST_PLAN.md`.
